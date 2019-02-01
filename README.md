@@ -2,7 +2,7 @@
 
 midi_shutdown_server.py
 
-A python script to create a midi device, and send control change messages out through it.
+A python script to create a midi device, and listen for control change messages to trigger shutdown.
 
 ```python
 import time
