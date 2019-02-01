@@ -11,7 +11,7 @@ import mido
 import os
 import re
 
-# midi device naming and setup
+# midi device naming
 name = "MidiShutdownServer"
 
 # shutdown command
@@ -21,11 +21,12 @@ shutdown_cmd = "sudo init 0 &"
 shutdown_cc_num = 64
 shutdown_cc_val = 127
 
-# wait some seconds, so we don't step on MODEP's toes
-#time.sleep()
-
 # prevent shutdown command from running unless uptime is > secs
 shutdown_abort_uptime_secs = 120;
+
+#
+# Logic below
+#
 
 # set up backend
 mido.set_backend('mido.backends.rtmidi')
