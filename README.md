@@ -13,13 +13,11 @@ import re
 
 Also requires 'amidithru'
 
-The script is hopefully laid out clearly enough that customizing and adjusting things should be easy.
-
 The script creates a virtual midi device, and listens for incoming midi control change messages.
 
-Currently, if it receives control change 64, with a value of 127, runs the shutdown command (sudo init 0).
+Configurably, if it receives control change 64, with a value of 127, runs the shutdown command (sudo init 0).
 
-There is logic built-in to check /proc/uptime and make sure the system has been up for at leaast 120 seconds before it will run the shutdown command.
+There is logic built-in to check /proc/uptime and make sure the system has been up for at leaast 120 seconds (adjustable) before it will run the shutdown command.
 
 This was done to hopefully prevent issues where, just after boot, something immediately sends the thing a signal and shuts your stuff down.
 
