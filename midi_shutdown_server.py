@@ -52,6 +52,7 @@ def uptime():
 
 # keep running and watch for cmd
 while True:
+  time.sleep(.1)
   while inport.pending():
     msg = inport.receive()
     if msg.type == "control_change":
