@@ -30,7 +30,8 @@ Generally, add an entry to your crontab to call the script on startup:
 @reboot /usr/bin/sudo /path/to/midi_shutdown_server.py &
 ```
 
-*Note about sudo*
+Note about sudo
+---------------
 
 This script requires root to run, so you need to call it with sudo if you are not the root user.
 
