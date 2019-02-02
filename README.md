@@ -33,9 +33,9 @@ Generally, add an entry to your crontab to call the script on startup:
 Note about sudo
 ---------------
 
-This script requires root to run, so you need to call it with sudo if you are not the root user.
+This script requires root to run, so you need to call it with sudo, without password, or you can save the line in the root crontab, without the need for sudo.
 
-To have this work on boot, you must not have sudo require a password to work.
+To have this work on boot with sudo, you must not have sudo require a password to work.
 
 You can achieve this by adding a new file and rule to your sudoers config. with visudo (username modep in examples):
 
